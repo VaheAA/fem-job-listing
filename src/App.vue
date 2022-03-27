@@ -8,6 +8,7 @@ import JobsContainer from './components/JobsContainer.vue';
 
 <style lang="scss">
 #app {
+  height: 100%;
   background-color: $bgLightCyan;
 }
 </style>
