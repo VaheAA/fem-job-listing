@@ -4,7 +4,11 @@
       <ul class="jobs__filter-tags">
         <li class="jobs__filter-item" v-for="tag in tagsList" :key="tag">
           <span>{{ tag }}</span>
-          <button class="close" @click="deleteTag(tag)">
+          <button
+            class="close"
+            @click="deleteTag(tag)"
+            aria-label="delete tag "
+          >
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
               <path
                 fill="#FFF"

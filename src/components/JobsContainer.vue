@@ -1,10 +1,12 @@
 <template>
-  <div class="jobs__wrapper">
-    <JobsHeaderBg />
-    <div class="container">
-      <JobsList />
+  <main>
+    <div class="jobs__wrapper">
+      <JobsHeaderBg />
+      <div class="container">
+        <JobsList />
+      </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>
