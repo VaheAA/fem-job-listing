@@ -30,7 +30,12 @@
     </div>
     <div class="job__tags">
       <ul class="job__tags-list">
-        <li class="job__tags-item" v-for="tag in tags" :key="tag">
+        <li
+          class="job__tags-item"
+          v-for="tag in tags"
+          :key="tag"
+          @click="addTag(tag)"
+        >
           <span>{{ tag }}</span>
         </li>
       </ul>
@@ -51,6 +56,12 @@ const props = defineProps({
   tags: Array,
   image: String
 });
+
+const emit = defineEmits(['addTag']);
+
+const addTag = (tag) => {
+  emit('addTag', tag);
+};
 </script>
 
 <style lang="scss">

@@ -1,7 +1,8 @@
 <template>
+  <JobsFilter :tagsList="filterTags" @deleteTag="deleteTag" />
   <div class="jobs__list-wrapper">
     <ul class="jobs__list">
-      <li v-for="job in jobs" :key="job.id">
+      <li v-for="job in filteredJobs" :key="job.id">
         <JobItem
           :job="job"
           :companyName="job.company"
@@ -13,6 +14,7 @@
           :location="job.location"
           :tags="job.tags"
           :image="job.logo"
+          @addTag="addFilterTag"
         />
       </li>
     </ul>
@@ -21,15 +23,37 @@
 
 <script setup>
 import JobItem from './JobItem.vue';
+import JobsFilter from './JobsFilter.vue';
 import data from '../../public/data.json';
-import { ref } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 
+const filterTags = ref([]);
 const jobs = ref(data);
 
 jobs.value.forEach((job) => {
   const { role, level, languages, tools } = job;
   job.tags = [role, level, ...languages, ...tools];
 });
+
+const filteredJobs = computed(() => {
+  if (filterTags.value.length) {
+    return jobs.value.filter((job) =>
+      filterTags.value.every((tag) => job.tags.includes(tag))
+    );
+  } else return jobs.value;
+});
+
+const addFilterTag = (tag) => {
+  if (!filterTags.value.includes(tag)) {
+    filterTags.value.push(tag);
+  }
+};
+
+const deleteTag = (tag) => {
+  filterTags.value = filterTags.value.filter((el) => el !== tag);
+};
+
+const equals = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
 </script>
 
 <style lang="scss">
