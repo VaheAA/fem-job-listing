@@ -1,12 +1,13 @@
 <template>
   <div
     class="job__item"
+    :class="{ 'job__item--featured': labelFeatured }"
     :job="job"
     :labelNew="labelNew"
     :labelFeatured="labelFeatured"
   >
     <div class="job__logo">
-      <img src="../assets/img/photosnap.svg" alt="Photosnap vacancy" />
+      <img :src="image" alt="Photosnap vacancy" />
     </div>
     <div class="job__details">
       <div class="job__details-top">
@@ -47,7 +48,8 @@ const props = defineProps({
   posted: String,
   type: String,
   location: String,
-  tags: Array
+  tags: Array,
+  image: String
 });
 </script>
 
@@ -57,11 +59,14 @@ const props = defineProps({
   background-color: #fff;
   padding: 40px;
   border-radius: 5px;
-  border-left: 4px solid $primaryDarkCyan;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &--featured {
+    border-left: 4px solid $primaryDarkCyan;
+  }
 
   .job__logo {
     margin-right: 35px;
@@ -96,7 +101,6 @@ const props = defineProps({
       gap: 5px;
     }
     .job__label {
-      background-color: black;
       color: #fff;
       padding: 2px 10px;
       border-radius: 15px;
@@ -105,8 +109,15 @@ const props = defineProps({
       justify-content: center;
       align-items: center;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 13px;
+
+      &--new {
+        background-color: $primaryDarkCyan;
+      }
+      &--featured {
+        background-color: $veryDarkCyan;
+      }
     }
 
     &-body {
@@ -118,6 +129,12 @@ const props = defineProps({
     .job__title {
       font-size: 18px;
       color: $veryDarkCyan;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $primaryDarkCyan;
+      }
     }
     &-info {
       display: flex;
@@ -155,15 +172,42 @@ const props = defineProps({
     }
 
     &-item {
-      background-color: $bgLightCyan;
-      padding: 5px;
-      border-radius: 5px;
       cursor: pointer;
 
       span {
+        background-color: $bgLightCyan;
+        border-radius: 5px;
+        padding: 5px;
         font-size: 16px;
         color: $primaryDarkCyan;
         font-weight: bold;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          top: 0;
+          left: 0;
+          background-color: $bgLightCyan;
+          opacity: 0;
+          z-index: -1;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          color: #fff;
+        }
+
+        &:hover::after {
+          color: #fff;
+          background-color: $primaryDarkCyan;
+          opacity: 1;
+        }
       }
     }
   }

@@ -11,7 +11,8 @@
           :posted="job.postedAt"
           :type="job.contract"
           :location="job.location"
-          :tags="job.languages"
+          :tags="job.tags"
+          :image="job.logo"
         />
       </li>
     </ul>
@@ -25,7 +26,10 @@ import { ref } from 'vue';
 
 const jobs = ref(data);
 
-console.log(jobs.value);
+jobs.value.forEach((job) => {
+  const { role, level, languages, tools } = job;
+  job.tags = [role, level, ...languages, ...tools];
+});
 </script>
 
 <style lang="scss">
