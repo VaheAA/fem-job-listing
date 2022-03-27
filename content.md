@@ -1,193 +1,261 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Job Listings</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
   <!-- Item Start -->
-  Photosnap
-  New!
-  Featured
-  Senior Frontend Developer
-  1d ago
-  Full Time
-  USA only
+
+Photosnap
+New!
+Featured
+
   <!-- Role -->
-  Frontend
+
+Frontend
+
   <!-- Level -->
-  Senior
+
+Senior
+
   <!-- Languages -->
-  HTML
-  CSS
-  JavaScript
+
+HTML
+CSS
+JavaScript
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  Manage
-  New!
-  Featured
-  Fullstack Developer
-  1d ago
-  Part Time
-  Remote
+
+Manage
+New!
+Featured
+Fullstack Developer
+1d ago
+Part Time
+Remote
+
   <!-- Role -->
-  Fullstack
+
+Fullstack
+
   <!-- Level -->
-  Midweight
+
+Midweight
+
   <!-- Languages -->
-  Python
+
+Python
+
   <!-- Tools -->
-  React
+
+React
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  Account
-  New!
-  Junior Frontend Developer
-  2d ago
-  Part Time
-  USA only
+
+Account
+New!
+Junior Frontend Developer
+2d ago
+Part Time
+USA only
+
   <!-- Role -->
-  Frontend
+
+Frontend
+
   <!-- Level -->
-  Junior
+
+Junior
+
   <!-- Languages -->
-  JavaScript
+
+JavaScript
+
   <!-- Tools -->
-  React
-  Sass
+
+React
+Sass
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  MyHome
-  Junior Frontend Developer
-  5d ago
-  Contract
-  USA only
+
+MyHome
+Junior Frontend Developer
+5d ago
+Contract
+USA only
+
   <!-- Role -->
-  Frontend
+
+Frontend
+
   <!-- Level -->
-  Junior
+
+Junior
+
   <!-- Languages -->
-  CSS
-  JavaScript
+
+CSS
+JavaScript
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  Loop Studios
-  Software Engineer
-  1w ago
-  Full Time
-  Worldwide
+
+Loop Studios
+Software Engineer
+1w ago
+Full Time
+Worldwide
+
   <!-- Role -->
-  Fullstack
+
+Fullstack
+
   <!-- Level -->
-  Midweight
+
+Midweight
+
   <!-- Languages -->
-  JavaScript
-  Ruby
+
+JavaScript
+Ruby
+
   <!-- Tools -->
-  Sass
+
+Sass
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  FaceIt
-  Junior Backend Developer
-  2w ago
-  Full Time
-  UK only
+
+FaceIt
+Junior Backend Developer
+2w ago
+Full Time
+UK only
+
   <!-- Role -->
-  Backend
+
+Backend
+
   <!-- Level -->
-  Junior
+
+Junior
+
   <!-- Languages -->
-  Ruby
+
+Ruby
+
   <!-- Tools -->
-  RoR
+
+RoR
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  Shortly
-  Junior Developer
-  2w ago
-  Full Time
-  Worldwide
+
+Shortly
+Junior Developer
+2w ago
+Full Time
+Worldwide
+
   <!-- Role -->
-  Frontend
+
+Frontend
+
   <!-- Level -->
-  Junior
+
+Junior
+
   <!-- Languages -->
-  HTML
-  JavaScript
+
+HTML
+JavaScript
+
   <!-- Tools -->
-  Sass
+
+Sass
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  Insure
-  Junior Frontend Developer
-  2w ago
-  Full Time
-  USA only
+
+Insure
+Junior Frontend Developer
+2w ago
+Full Time
+USA only
+
   <!-- Role -->
-  Frontend
+
+Frontend
+
   <!-- Level -->
-  Junior
+
+Junior
+
   <!-- Languages -->
-  JavaScript
+
+JavaScript
+
   <!-- Tools -->
-  Vue
-  Sass
+
+Vue
+Sass
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  Eyecam Co.
-  Full Stack Engineer
-  3w ago
-  Full Time
-  Worldwide
+
+Eyecam Co.
+Full Stack Engineer
+3w ago
+Full Time
+Worldwide
+
   <!-- Role -->
-  Fullstack
+
+Fullstack
+
   <!-- Level -->
-  Midweight
+
+Midweight
+
   <!-- Languages -->
-  JavaScript
-  Python
+
+JavaScript
+Python
+
   <!-- Tools -->
-  Django
+
+Django
+
   <!-- Item End -->
 
   <!-- Item Start -->
-  The Air Filter Company
-  Front-end Dev
-  1mo ago
-  Part Time
-  Worldwide
+
+The Air Filter Company
+Front-end Dev
+1mo ago
+Part Time
+Worldwide
+
   <!-- Role -->
-  Frontend
+
+Frontend
+
   <!-- Level -->
-  Junior
+
+Junior
+
   <!-- Languages -->
-  JavaScript
+
+JavaScript
+
   <!-- Tools -->
-  React
-  Sass
+
+React
+Sass
+
   <!-- Item End -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-</html>
