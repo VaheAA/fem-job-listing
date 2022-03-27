@@ -1,7 +1,7 @@
 <template>
   <JobsFilter :tagsList="filterTags" @deleteTag="deleteTag" />
   <div class="jobs__list-wrapper">
-    <ul class="jobs__list">
+    <TransitionGroup class="jobs__list" name="list" tag="ul">
       <li v-for="job in filteredJobs" :key="job.id">
         <JobItem
           :job="job"
@@ -17,7 +17,7 @@
           @addTag="addFilterTag"
         />
       </li>
-    </ul>
+    </TransitionGroup>
   </div>
 </template>
 
@@ -25,7 +25,7 @@
 import JobItem from './JobItem.vue';
 import JobsFilter from './JobsFilter.vue';
 import data from '../../public/data.json';
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed } from 'vue';
 
 const filterTags = ref([]);
 const jobs = ref(data);
@@ -65,5 +65,9 @@ const equals = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @media (max-width: 550px) {
+    gap: 45px;
+  }
 }
 </style>

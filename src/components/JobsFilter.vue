@@ -1,20 +1,22 @@
 <template>
-  <div class="jobs__filter" :tagsList="tagsList">
-    <ul class="jobs__filter-tags">
-      <li class="jobs__filter-item" v-for="tag in tagsList" :key="tag">
-        <span>{{ tag }}</span>
-        <button class="close" @click="deleteTag(tag)">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-            <path
-              fill="#FFF"
-              fill-rule="evenodd"
-              d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
-            />
-          </svg>
-        </button>
-      </li>
-    </ul>
-  </div>
+  <Transition>
+    <div class="jobs__filter" :tagsList="tagsList" v-if="tagsList.length">
+      <ul class="jobs__filter-tags">
+        <li class="jobs__filter-item" v-for="tag in tagsList" :key="tag">
+          <span>{{ tag }}</span>
+          <button class="close" @click="deleteTag(tag)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+              <path
+                fill="#FFF"
+                fill-rule="evenodd"
+                d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </Transition>
 </template>
 
 <script setup>
@@ -36,6 +38,7 @@ const deleteTag = (tag) => {
   border-radius: 5px;
   padding: 15px 45px;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+  margin-top: -30px;
 
   &-tags {
     display: flex;

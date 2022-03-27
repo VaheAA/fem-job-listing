@@ -75,6 +75,13 @@ const addTag = (tag) => {
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 728px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+
   &--featured {
     border-left: 4px solid $primaryDarkCyan;
   }
@@ -88,6 +95,10 @@ const addTag = (tag) => {
       object-fit: cover;
       display: block;
     }
+    @media (max-width: 728px) {
+      margin-top: -30px;
+      max-width: 45px;
+    }
   }
 
   .job__details {
@@ -95,6 +106,24 @@ const addTag = (tag) => {
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    @media (max-width: 728px) {
+      gap: 15px;
+      position: relative;
+      margin-right: 0;
+      width: 100%;
+
+      &::after {
+        content: '';
+        position: a;
+        height: 1px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: $darkCyan;
+      }
+    }
+
     &-top {
       display: flex;
       align-items: center;
@@ -142,6 +171,9 @@ const addTag = (tag) => {
       color: $veryDarkCyan;
       transition: all 0.3s ease;
       cursor: pointer;
+      @media (max-width: 728px) {
+        margin-bottom: 15px;
+      }
 
       &:hover {
         color: $primaryDarkCyan;
@@ -151,6 +183,10 @@ const addTag = (tag) => {
       display: flex;
       justify-content: space-between;
       gap: 20px;
+
+      @media (max-width: 728px) {
+        justify-content: flex-start;
+      }
     }
     .job__info {
       color: $darkCyan;
@@ -180,6 +216,11 @@ const addTag = (tag) => {
       display: flex;
       align-items: center;
       gap: 15px;
+      flex-wrap: wrap;
+
+      @media (max-width: 728px) {
+        padding-bottom: 15px;
+      }
     }
 
     &-item {
