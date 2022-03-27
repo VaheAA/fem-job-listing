@@ -7,7 +7,7 @@
     :labelFeatured="labelFeatured"
   >
     <div class="job__logo">
-      <img :src="image" alt="Photosnap vacancy" />
+      <img :src="image" :alt="companyName" />
     </div>
     <div class="job__details">
       <div class="job__details-top">
