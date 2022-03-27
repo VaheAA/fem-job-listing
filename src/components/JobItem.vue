@@ -11,7 +11,7 @@
     </div>
     <div class="job__details">
       <div class="job__details-top">
-        <h5 class="job__company">{{ companyName }}</h5>
+        <span class="job__company">{{ companyName }}</span>
         <div class="job__lables">
           <span class="job__label job__label--new" v-if="labelNew">New</span>
           <span class="job__label job__label--featured" v-if="labelFeatured"
